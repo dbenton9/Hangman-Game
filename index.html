@@ -1,0 +1,51 @@
+<!Doctype html>
+<html>
+
+	<head>
+
+		<meta charset="UTF-8">
+    	<title>Hangman</title>
+    	<!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
+  		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+		
+		
+
+	</head>
+
+	<body onload="dashLine()">
+		
+		<!-- header for hangman -->
+		<header>
+			
+		</header>
+
+		<!-- Main Body -->
+		<div>
+			
+
+		            <!--<h2>Your word is: <span id="user-text"> <strong></strong></span></h2>-->
+					<input id="letter" type="text">
+					<!-- change input to textarea and set id to match document.onkeyup = function(e) -->
+					<input type="button" value="guess" onClick="letter()">
+					<p id="answer"></p>
+					<p id="counter"></p>
+					<p id="stat"></p>
+						
+		            	
+		            	<button onclick="splitWord()">Solution</button>
+		            	<p id="word"> </p>
+						
+						<!-- generate an array of the dashed line -->
+						
+						
+		            
+		        
+
+		</div>
+
+		<!-- scripts -->
+		<script  type="text/javascript" src="assets/javascript/game.js"></script>
+
+	</body>
+
+</html>

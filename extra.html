@@ -1,0 +1,144 @@
+<!Doctype html>
+<html>
+
+	<head>
+
+		<meta charset="UTF-8">
+    	<title>Hangman</title>
+    	<!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
+  		<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+		
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+	</head>
+
+	<body onload="dashLine()">
+		
+		<!-- header for hangman -->
+		<header>
+			
+		</header>
+
+		<!-- Main Body -->
+		<div>
+			
+			<div class="container">
+		      <div class="row">
+		        <div class="col-md-offset-2 col-md-8">
+		          <div class="jumbotron">
+
+		            
+
+		            <h2>You just typed <span id="user-text"><strong>...Nothing.</strong></span></h2>
+						
+						<!-- submit a guess via a form 
+						<p id="dashed-line"> </p>
+		            	<button onclick="splitWord()">Guess</button>
+		            	-->
+						
+						<!-- generate an array of the word -->
+		            	
+		            	<button onclick="splitWord()">Try it</button>
+		            	<p id="word"> </p>
+						
+						<!-- generate an array of the dashed line -->
+						
+						<button onclick="splitDash()">Try it</button>
+						<p id="dash"></p>
+		            
+		          </div>
+		        </div>
+		      </div>
+		    </div>
+
+		</div>
+
+		<!-- scripts -->
+		<script  type="text/javascript" src="assets/javascript/game.js">
+			
+  document.onkeyup = function(e) 
+  {
+
+    var guess = e.key;
+    console.log(guess); 
+
+    //for loop runs through all letters to compare guess
+    for (var i = 0; i <= word.length-1; i++) 
+    {
+      if (word[i] === guess);
+      {
+        dashArray[i] = guess;
+      }
+    }
+    document.getElementById("user-text").innerHTML = dashArray.join(" ");
+  }   
+//}
+
+//splits "word" into array
+function splitWord() {
+    var str = word;
+    var res = str.split("");
+    document.getElementById("word").innerHTML = res;
+}
+
+
+
+//splits "dash" into array
+function splitDash() {
+    var str = dash;
+    var res = str.split("");
+    document.getElementById("dash").innerHTML = res;
+}
+
+//
+// *********** User begins to play **************
+//
+
+
+//user input for guesses
+//ADD CODE HERE FOR USER INPUT
+//var = prompt("Guess a letter:");
+//var guess = '';
+
+//document.onkeyup = function(e) {
+
+ // var guess = e.key;
+  //console.log(guess);    
+
+  //for (var i = 0; i <= word.length-1; i++) {
+    
+
+    //if ("guess" === word[i]) {
+    //dash[i].push(word[i]);
+
+    //}
+
+  //}
+
+//}
+
+
+// ****** WHEN "dash" === "word" user wins ***
+
+//loop to run guess through lenght of the "word"
+
+
+
+//for (var i = 0; i <= word.length; i++) {
+
+  //conditional statement to compare guess with "word"
+ // if (guess_js = splitWord(i)){
+//    console.log("yay");
+  //}
+  //else {
+   // console.log("no");
+  //}
+//}
+			
+		</script>
+
+	</body>
+
+</html>
+
+
